@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="suite">
+  <!--  <parameter name="testdata" value="\test.properties"/>-->
+  <test verbose="2" name="Regression1">
+    <classes>
+      <class name="HWL.COM.helloworld.AppTest1">
+      </class>
+    </classes>
+  </test>
+</suite>
