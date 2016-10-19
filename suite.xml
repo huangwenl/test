@@ -4,7 +4,7 @@
   <!--  <parameter name="testdata" value="\test.properties"/>-->
   <test verbose="2" name="Regression1">
     <classes>
-      <class name="HWL.COM.helloworld.AppTest1">
+      <class name="HWL.COM.helloworld.TestBrowsers">
       </class>
     </classes>
   </test>
