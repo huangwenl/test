@@ -2,7 +2,6 @@ package HWL.COM.helloworld;
 
 import java.util.List;
 
-import org.apache.tools.ant.property.ParseProperties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -32,13 +31,13 @@ public class TestBrowsers implements JDweb {
 	wait.waitForElementPresent(logo);
 	driver.findElement(By.xpath(usernameLocator)).click();
 	switchToSome = new SwitchToSome(driver);
-	switchToSome.swtichToNewWindows("我的京东");
-	// 下拉到个人信息位置
+	switchToSome.swtichToNewWindows("锟揭的撅拷锟斤拷");
+
 	((JavascriptExecutor) driver)
 		.executeScript("window.scrollBy(0,900)", 0);
 	wait.waitFor(5000);
 	driver.findElement(By.xpath(self)).click();
-	switchToSome.swtichToNewWindows("账户信息");
+	switchToSome.swtichToNewWindows("锟剿伙拷锟斤拷息");
 	wait.waitForElementPresent(brithday);
 	Select selectYear = new Select(driver.findElement(By.xpath(brithday)));
 	// selectYear.selectByVisibleText("2005");

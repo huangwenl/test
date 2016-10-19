@@ -11,7 +11,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class Browsers {
     private static WebDriver driver = null;
-    // IE浏览器设置参数
+
     private static String projectPath = System.getProperty("user.dir");
     private static DesiredCapabilities caps = null;
 
@@ -38,7 +38,7 @@ public class Browsers {
 	case FIREFOX:
 	    FirefoxProfile firefoxProfile = new FirefoxProfile();
 	    firefoxProfile.setPreference("webdriver.accept.untrusted.certs",
-		    true);// 绕过证书
+		    true);
 	    driver = new FirefoxDriver(firefoxProfile);
 	    break;
 	}

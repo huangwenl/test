@@ -12,7 +12,6 @@ public class Wait {
 	this.driver = driver;
     }
 
-    // 等待当前元素显示
     public void waitForElementPresent(String locator) {
 	(new WebDriverWait(driver, 10)).until(ExpectedConditions
 		.presenceOfElementLocated(By.xpath(locator)));
