@@ -31,13 +31,13 @@ public class TestBrowsers implements JDweb {
 	wait.waitForElementPresent(logo);
 	driver.findElement(By.xpath(usernameLocator)).click();
 	switchToSome = new SwitchToSome(driver);
-	switchToSome.swtichToNewWindows("�ҵľ���");
+	switchToSome.swtichToNewWindows("我的京东");
 
 	((JavascriptExecutor) driver)
 		.executeScript("window.scrollBy(0,900)", 0);
 	wait.waitFor(5000);
 	driver.findElement(By.xpath(self)).click();
-	switchToSome.swtichToNewWindows("�˻���Ϣ");
+	switchToSome.swtichToNewWindows("账户信息");
 	wait.waitForElementPresent(brithday);
 	Select selectYear = new Select(driver.findElement(By.xpath(brithday)));
 	// selectYear.selectByVisibleText("2005");
