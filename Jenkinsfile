@@ -10,8 +10,8 @@ node('master') {
   if (v) {
       echo "---Building version ${v}---"
     }
-  def mvnHome = tool 'M3'
-	echo "----------------------mvn -B -D verify----------------------"
+  def mvnHome = tool 'MAVEN_HOME'
+     echo "----------------------mvn -B -D verify----------------------"
   sh "${mvnHome}/bin/mvn -B -Dmaven.test.failure.ignore verify"
 }
 
