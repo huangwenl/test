@@ -1,18 +1,28 @@
 #!/usr/bing/env groovy
 
 node('master') {
-	echo "----------------------start git url----------------------"
+	 stage('Build'){
+	 echo "----------------------start git url----------------------"
     //checkout scm
   //git url: 'https://gitee.com/roclli/simple-maven-project-with-tests.git'
   git url: 'https://github.com/huangwenl/test.git'
 	echo "----------------------version()----------------------"
   def v = version()
   if (v) {
+		echo "Building......"
       echo "---Building version ${v}---"
     }
-  def mvnHome = tool 'mvn_home'
+	 }
+	
+	stage('Test'){
+	 def mvnHome = tool 'mvn_home'
+		echo "Testing......"
      echo "----------------------mvn -B -D verify----------------------"
   sh "${mvnHome}/bin/mvn -B -Dmaven.test.failure.ignore verify"
+	}
+ 	 stage('Deploy') {
+        echo 'Deploying....'
+    }
 }
 
 def version() {
